@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.0/weui.min.css"/>
+</head>
+<body>
+
+<div class="weui-panel weui-panel_access">
+    <div class="weui-panel__bd">
+        {% for post in posts %}
+        <div class="weui-media-box weui-media-box_text" onclick="location.href='{{ post.Article_url }}'">
+
+            <h4 class="weui-media-box__title">{{ post.Article_text}}</h4>
+            <p class="weui-media-box__desc">{{ post.pub_date}}</p>
+	    <img src="{{ post.img_url }}" width="200" height="80" />
+            <p class="weui-media-box__desc">阅读全文</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
